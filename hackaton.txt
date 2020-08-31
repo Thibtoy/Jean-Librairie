@@ -1,0 +1,117 @@
+Hackaton : 
+
+Je suis Jean librairie. Ma librairie se situe dans le 18ème arrondissement de Paris.
+J'aimerais avoir un outil en ligne me permettant de gérer ma librarie.
+
+Pour ce faire, je fais appel à vous. J'aimerais que vous me fassiez un M.V.P de cet outil en ligne.
+Mon souhait de lancer ma librarie en ligne me permettrait d'automatiser certains process comme celui : 
+
+- De fluidifier l'emprunt de livres pour les abonnés
+- De centraliser l'ensemble des informations :
+    - Livres 
+    - Autheur
+    - Abonnés
+
+- De permettre à chaque abonné d'avoir un espace personnalisé
+- De permettre à un abonné de changer ses informations personnelles
+
+Tips:
+- Essayer de définir un lead Back & Front
+- Bien définir les taches
+- Gestion de projet
+- Bien définir la stack
+
+Quelques consignes :
+
+- Un livre doit être rendu maximum 15 jours après son emprunt
+- Une personne ne peut pas emprunter plus de 5 livres à la fois
+
+Prochain hackaton : 
+
+- Assets - Maquettes & Réflexion produit faites
+- Cahier des charges
+- Je vais faire le client
+- Compétition
+
+Vous allez mettre en place la solution technique
+
+------------------------------------------------------------------------
+
+1 - Thibault - Lead BACK
+    Lilian  - Lead FRONT
+    Shelley - Gestion de projet
+
+2 - Julien - lead BACK
+    Clémence - lead FRONT
+    Rim - lead Gestion de projet
+
+3 - Alexandre - lead BACK
+  - Elena - Gestion de projet
+  - Yega - lead FRONT
+
+------------------------------------------------------------------------
+
+---------------------------------   AIDE   -----------------------------
+
+------------------------------------------------------------------------
+
+Librairie : 
+
+- Book 
+  - id
+  - nom
+  - auteur
+  - date de publication
+  - resume
+  - genre
+  - Langue
+  - dispo : True / False
+ 
+- Type :
+   - id
+   - nom
+
+- Author : 
+   - id
+   - prénom
+   - nom
+   - date de naissance
+   
+- User : 
+   - id
+   - prenom
+   - email
+   - nb_books_borrowed 
+   - ...
+
+- user_borrows_books : 
+   - id
+   - id_user
+   - id_book
+   - date
+
+
+------------------------------------------------------------------------
+
+-------------------------------  SITEMAP   -----------------------------
+
+------------------------------------------------------------------------
+
+Homepage : Accès publique
+    - Récap et informations de la e-librairie (doit être stocké en base de données pour pouvoir les modifier par l'admin)
+    - Dispatch sur se connecter ou se créer un compte
+
+Browse books : All users - Can Browse books, retrieve informatons about the book, and author, can filter. can't borrow a book if not logged in
+
+Dashboard : abonné - (user rights)
+    - home - nav :
+        - Borrowed books
+        - History - Get all borrowed books
+        - Profile
+    - Browse books : All users - Can Browse books, retrieve informatons about the book, and author, can filter. can't borrow a book if not logged in
+    - My calendar (bonus) : Connected - Get a temporal view of each borrowed books
+    
+    
+Dashboard Admin : (admin rights)
+    - Users : get all user informations
+    - Can change the home page informations
