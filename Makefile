@@ -1,1 +1,8 @@
-it-hot: git submodule init && git submodule update
+it-hot: init update 
+
+init: 
+	git submodule init
+
+update: 
+	git submodule update
+
