@@ -1,0 +1,6 @@
+[submodule "front"]
+	path = front
+	url = https://github.com/Lilian-Mahut/JeanLibrairie-Front
+[submodule "back"]
+	path = back
+	url = https://github.com/Thibtoy/Jean-Librairie-Back.git
