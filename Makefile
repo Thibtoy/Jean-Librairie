@@ -1,16 +1,18 @@
-it-hot: init update frontend backend
+it-hot: updateAndInit checkoutSubmodules frontend backend
 
-init: 
-	git submodule init
+it-start: frontend backend
 
-update: 
-	git submodule update
+updateAndInit:
+	git pull && git submodule update --init 
+
+checkoutSubmodules:
+	git submodule foreach -q --recursive 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
 
 backend:
-	cd back && npm install && npm start
+	cd back && npm install && gnome-terminal -- bash -c "npm start; bash"
 
 frontend:
-	cd front && npm install && npm run front
+	cd front && npm install && gnome-terminal -- bash -c "npm run front; bash"
 
 test:
 	cd back && node test.js
