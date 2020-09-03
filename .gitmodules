@@ -1,9 +1,9 @@
 [submodule "front"]
 	path = front
 	url = https://github.com/Lilian-Mahut/JeanLibrairie-Front
-	branch = develop
+	branch = master
 
 [submodule "back"]
 	path = back
 	url = https://github.com/Thibtoy/Jean-Librairie-Back.git
-	branch = develop
+	branch = master
